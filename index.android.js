@@ -11,13 +11,13 @@ import {
   Text,
   View
 } from 'react-native';
-import Menber from './src/components/menber.js';
+import Member from './src/components/member.js';
 import Test from './src/components/setPwd';
 export default class app extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Test/>
+        <Member/>
       </View>
     );
   }
