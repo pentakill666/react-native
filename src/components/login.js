@@ -16,7 +16,7 @@ import {
 import Inputbox from './inputbox';
 import LogBtn from './loginBtn';
 import RadioBtn from './radioBtn';
-export default class menber extends Component {
+export default class member extends Component {
   constructor(props) {
     super(props);
   }
@@ -24,7 +24,7 @@ export default class menber extends Component {
     return (
       <ImageBackground
         style={styles.container}
-        source={{uri:'http://i1.bvimg.com/596158/447177f3a2971610.png'}}
+        source={{uri:'http://i1.bvimg.com/596158/447177f3a2971610s.png'}}
         resizeMode='stretch'
         >
         <View style={styles.main}>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   main: {
     paddingTop:26,
-    paddingBottom:26,
+    paddingBottom:0,
     paddingLeft:36,
     paddingRight:36,
     backgroundColor:'#fff',

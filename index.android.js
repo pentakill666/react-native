@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 import Menber from './src/components/menber.js';
-import Test from './src/components/mobileValidate';
+import Test from './src/components/setPwd';
 export default class app extends Component {
   render() {
     return (

@@ -7,11 +7,11 @@ import {
   ImageBackground,
   Alert,
 } from 'react-native';
+import LoginHeader from './loginHeader';
 import Inputbox from './inputbox';
 import LogBtn from './loginBtn';
 import RadioBtn from './radioBtn';
-import LoginHeader from './loginHeader';
-export default class mobileValidate extends Component {
+export default class menber extends Component {
   constructor(props) {
     super(props);
   }
@@ -22,27 +22,17 @@ export default class mobileValidate extends Component {
         source={{uri:'http://i1.bvimg.com/596158/447177f3a2971610s.png'}}
         resizeMode='stretch'
         >
-        <LoginHeader isActive='1'/>
-        <View>
-          <View style={styles.item}>
-            <View style={styles.circle}></View>
-          </View>
-          <View style={styles.item}>
-            <View style={styles.circle}></View>
-          </View>
-        </View>
+        <LoginHeader/>
         <View style={styles.main}>
           <View>
-              <Text style={styles.title}>已有账号</Text>
+              <Text style={styles.title}>请输入密码</Text>
               <View style={styles.wrap}>
-                  <Inputbox placeholder='请输入手机号'/>
-                  <LogBtn title='获取手机验证码' />
+                  <Inputbox placeholder='' isHide={true}/>
               </View>
-              <Text style={styles.title}>若该手机无法接受短信，请联系客服</Text>
-              <Text style={styles.title}>400-400-400</Text>
+              <Text style={styles.title}>请重复密码</Text>
               <View style={styles.wrap}>
-                  <Inputbox placeholder='请输入验证码'/>
-                  <LogBtn title='下一步'/>
+                  <Inputbox placeholder='' isHide={true}/>
+                  <LogBtn title='立即注册'/>
               </View>
           </View>
         </View>
@@ -58,10 +48,6 @@ const styles = StyleSheet.create({
     paddingBottom:34,
     paddingLeft:28,
     paddingRight:28,
-  },
-  item:{
-    flex:1,
-    alignItems:"center"
   },
   main: {
     paddingTop:26,
