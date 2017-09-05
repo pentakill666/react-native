@@ -12,10 +12,14 @@ import LogBtn from './loginBtn';
 import RadioBtn from './radioBtn';
 import LoginHeader from './loginHeader';
 export default class mobileValidate extends Component {
+  static navigationOptions = {
+    headerTitle:'手机验证',
+  };
   constructor(props) {
     super(props);
   }
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <ImageBackground
         style={styles.container}
@@ -42,7 +46,7 @@ export default class mobileValidate extends Component {
               <Text style={styles.title}>400-400-400</Text>
               <View style={styles.wrap}>
                   <Inputbox placeholder='请输入验证码'/>
-                  <LogBtn title='下一步'/>
+                  <LogBtn title='下一步' link={()=>navigate('setPwd')}/>
               </View>
           </View>
         </View>

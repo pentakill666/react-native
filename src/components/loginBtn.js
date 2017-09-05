@@ -13,7 +13,7 @@ import {
 export default class loginBtn extends Component {
   render() {
     return (
-            <Text style={styles.lowrap}>
+            <Text style={styles.lowrap} onPress={this.props.link}>
               {this.props.title}
             </Text>
     );

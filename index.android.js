@@ -7,27 +7,14 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
 } from 'react-native';
-import Member from './src/components/member.js';
-import Test from './src/components/setPwd';
+import Test from './src/components/layout';
 export default class app extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Member/>
-      </View>
+      <Test/>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
 
 AppRegistry.registerComponent('app', () => app);

@@ -17,10 +17,14 @@ import Inputbox from './inputbox';
 import LogBtn from './loginBtn';
 import RadioBtn from './radioBtn';
 export default class member extends Component {
+  static navigationOptions = {
+    headerTitle:'登录',
+  };
   constructor(props) {
     super(props);
   }
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <ImageBackground
         style={styles.container}
@@ -33,11 +37,11 @@ export default class member extends Component {
               <View style={styles.wrap}>
                   <Inputbox placeholder='请输入手机号'/>
                   <Inputbox placeholder='请输入密码' isHide={true} />
-                  <LogBtn title='立即登录' />
+                  <LogBtn title='立即登录' link={()=>navigate('member')} />
               </View>
               <Text style={styles.title}>没有账号</Text>
               <View style={styles.wrap}>
-                  <LogBtn title='立即注册'/>
+                  <LogBtn title='立即注册' link={()=>navigate('mobileValidate')}/>
               </View>
               <RadioBtn label='同意并接受《XXX会员协议》'/>
           </View>
